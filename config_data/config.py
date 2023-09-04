@@ -22,7 +22,7 @@ class Config:
     # db: DatabaseConfig
 
 
-def load_config(path: str | None) -> Config:
+def load_config(path: str | None = None) -> Config:
 
     env = Env()
     env.read_env(path)
