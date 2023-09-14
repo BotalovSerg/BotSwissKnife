@@ -6,4 +6,5 @@ LEXICON_RU: dict[str, str] = {
 LEXICON_COMMANDS_RU: dict[str, str] = {
     '/help': 'Спарвка по работе бота',
     '/support': 'Поддержка',
+    '/weather': 'Погода',
 }
