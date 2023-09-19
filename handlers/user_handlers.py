@@ -9,3 +9,8 @@ router: Router = Router()
 @router.message(CommandStart())
 async def cd_start(message: Message):
     await message.answer(text=LEXICON_RU['/start'])
+
+
+@router.message(Command("help"))
+async def cmd_help(message: Message):
+    await message.answer(text=LEXICON_RU['/help'])
