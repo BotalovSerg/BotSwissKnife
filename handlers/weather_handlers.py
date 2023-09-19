@@ -11,4 +11,6 @@ router: Router = Router()
 async def cmd_weather(message: Message):
     answ = get_weather(get_coordinates())
 
-    await message.answer(f"City: {answ.location}\nTemp: {answ.temperature}")
+    await message.answer(f"City: {answ.location}, {answ.description} \
+                         \nTemperature is: {answ.temperature}°C, \
+                         feels like {answ.temperature_feeling}°C")

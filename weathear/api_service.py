@@ -25,10 +25,8 @@ def load_api_key_weather(path: str | None = None):
 class GetWeather:
     location: str
     temperature: Celsius
-
-
-# get_cor = get_coordinates()
-# get_api = f'https://api.openweathermap.org/data/2.5/weather?lat={get_cor.latitude}&lon={get_cor.longitude}&appid={api_key.api_key}&units=metric'
+    temperature_feeling: Celsius
+    description: str
 
 
 def _get_openweather_response(latitude: float, longitude: float, api_key) -> str:
@@ -48,11 +46,16 @@ def _parse_pesponse(response: str) -> GetWeather:
     dict_response = json.loads(response)
     temp = dict_response['main']['temp']
     location = dict_response['name']
+    temperature_feeling = dict_response['main']['feels_like']
+    description = str(dict_response['weather'][0]['description'])
+
     # print(temp)
     # print(location)
     return GetWeather(
         location=location,
-        temperature=temp
+        temperature=temp,
+        temperature_feeling=temperature_feeling,
+        description=description
     )
 
 
