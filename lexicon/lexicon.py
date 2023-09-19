@@ -10,3 +10,8 @@ LEXICON_COMMANDS_RU: dict[str, str] = {
     '/support': 'Предложения и пожелания',
     '/weather': 'Погода',
 }
+
+LEXICON_WEATHER_KB: dict[str, str] = {
+    'Weather': 'weather',
+    'Sun': 'sun'
+}
