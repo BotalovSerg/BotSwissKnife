@@ -1,9 +1,13 @@
 import asyncio
+import logging
 
 from aiogram import Bot, Dispatcher
 from config_data.config import load_config, Config
 from handlers import user_handlers, weather_handlers
 from keyboards.set_menu import set_main_menu
+
+
+logging.basicConfig(level=logging.INFO)
 
 
 async def main_bot() -> None:
