@@ -17,10 +17,10 @@ async def cmd_help(message: Message):
     await message.answer(text=LEXICON_RU['/help'])
 
 
-@router.message(Command("test"))
-async def cmd_test(message: Message):
-    kb = create_inline_kb(**LEXICON_WEATHER_KB)
-    await message.answer(
-        text='Test kb weather',
-        reply_markup=kb
-    )
+# @router.message(Command("test"))
+# async def cmd_test(message: Message):
+#     kb = create_inline_kb(**LEXICON_WEATHER_KB)
+#     await message.answer(
+#         text='Test kb weather',
+#         reply_markup=kb
+#     )
