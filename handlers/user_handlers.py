@@ -17,6 +17,16 @@ async def cmd_help(message: Message):
     await message.answer(text=LEXICON_RU['/help'])
 
 
+@router.message(Command("support"))
+async def cmd_help(message: Message):
+    await message.answer(text=LEXICON_RU['/support'])
+
+
+@router.message(Command("id_user"))
+async def cmd_user_id(message: Message):
+    await message.answer(text=f"Your ID: {message.from_user.id}")
+
+
 # @router.message(Command("test"))
 # async def cmd_test(message: Message):
 #     kb = create_inline_kb(**LEXICON_WEATHER_KB)
