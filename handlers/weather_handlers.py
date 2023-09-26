@@ -6,7 +6,7 @@ from aiogram.filters import Command
 from weathear.api_service import get_weather
 from weathear.coordinates import get_coordinates
 from lexicon.lexicon import LEXICON_WEATHER_KB
-from keyboards.inline_weather_kb import create_inline_kb
+from keyboards.inline_create_kb import create_inline_kb
 
 
 router: Router = Router()
@@ -40,8 +40,8 @@ async def press_btn_sun(callback: CallbackQuery):
 
 @router.message(Command("weather"))
 async def cmd_weather(message: Message):
-    kb = create_inline_kb(**LEXICON_WEATHER_KB)
+    kb = create_inline_kb(2, **LEXICON_WEATHER_KB)
     await message.answer(
-        text='Test kb weather',
+        text='Press the weather or sun button',
         reply_markup=kb
     )

@@ -1,9 +1,8 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from lexicon.lexicon import LEXICON_WEATHER_KB
 
 
-def create_inline_kb(**kwargs) -> InlineKeyboardMarkup:
+def create_inline_kb(width, **kwargs) -> InlineKeyboardMarkup:
     kb_builder = InlineKeyboardBuilder()
     buttons: list[InlineKeyboardButton] = []
 
@@ -13,6 +12,6 @@ def create_inline_kb(**kwargs) -> InlineKeyboardMarkup:
             callback_data=data
         ))
 
-    kb_builder.row(*buttons)
+    kb_builder.row(*buttons, width=width)
 
     return kb_builder.as_markup()
