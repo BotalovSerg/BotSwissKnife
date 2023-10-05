@@ -17,7 +17,7 @@ async def press_btn_weather(callback: CallbackQuery):
     answ = get_weather(get_coordinates())
     text = f"City: {answ.location}, {answ.description} \
                          \nTemperature is: {answ.temperature}°C, \
-                         feels like {answ.temperature_feeling}°C"
+                         \nfeels like {answ.temperature_feeling}°C"
     await callback.message.edit_text(
         text=text,
         reply_markup=callback.message.reply_markup
