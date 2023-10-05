@@ -1,5 +1,5 @@
 CMD_LEXICON_RU: dict[str, str] = {
-    '/start': 'Привет!\n\nЯ бот BotSwissKnife\n\n',
+    '/start': 'Привет!\nЯ бот BotSwissKnife\n\n',
     '/help': 'Что бы посмотреть текущую погоду отправь команду /weather\n\n'
     'Предложения и пожелания команда /support\n\n',
     '/support': 'Предложения и пожелания отправлять на email: botalovsergej03@gmail.com'
